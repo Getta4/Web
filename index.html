@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <title>Welcome!</title>
-        <meta charset="UTF-8">
-    </body>
     <head>
-        <h1>Hello World!</h1>
-        <button >
+        <title>Get4_'s Page</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="image/favicon.ico">
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+        #move{
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            text-align: center;
+        }
+        #canvas{
+            height: 100px;
+            width: 100px;
+            border: 4px double black;
+        }
+        </style>
     </head>
+    <body>
+        <h1>Get4_ のページ</h1>
+        <p>
+        <div id="canvas">
+            <img src="image/move/1.png" id="move">  
+        </div><button onclick="move()">動く</button>
+        </p>
+        <script>
+            const Img = document.getElementById("move")
+            let image = 1;
+            function move(){
+                image += 1;
+                if(image > 4){
+                    image=1;
+                }
+                Img.src = "image/move/"+image+".png";
+            }
+        </script>
+    </body>
 </html>
