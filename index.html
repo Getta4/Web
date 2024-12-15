@@ -10,22 +10,36 @@
             height: 100px;
             width: 100px;
             background-color: white;
+            border: 4px double black;
+        }
+        html{
             text-align: center;
         }
-        #canvas{
-            height: 100px;
-            width: 100px;
-            border: 4px double black;
+        h1{
+            font-size: 50px;
         }
         </style>
     </head>
     <body>
         <h1>Get4_ のページ</h1>
         <p>
-        <div id="canvas">
-            <img src="image/move/1.png" id="move">  
-        </div><button onclick="move()">動く</button>
+            <img src="image/move/1.png" alt="Icon" id="move">  
         </p>
+            <button onclick="move()">動く</button>
+        <h2>Follow me!</h2>
+        <div id="followme">
+            <a href="https://twitter.com/Get4_" target="_blank">
+            <img src="image/TwitterLogo.png" width="128" height="105" alt="画像"/>
+            </a>
+            <a href="https://Youtube.com/@Getq_" target="_blank">
+                <img src="image/YoutubeLogo.png" width="149" height="105" alt="画像"/>
+            </a>
+            <a href="https://Get4i.blogspot.com/" target="_blank">
+                <img src="image/bloggerlogo.png" width="105" height="105" alt="画像"/>
+            </a>
+        </div>
+
+
         <script>
             const Img = document.getElementById("move")
             let image = 1;
