@@ -4,7 +4,7 @@
         <title>Test Page</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <link rel="icon" href="image/favicon.ico">
+        <!--<link rel="icon" href="image/favicon.ico">-->
         <link rel="stylesheet" href="css/style.css">
         <!--OGP-->
         <meta property="og:title" content="Get4_'s website" />
@@ -19,10 +19,12 @@
         <meta name="twitter:image" content="https://getta4.github.io/Web/image/move/1.png" />
         <style>
         #ID-button{
-            height: 25px;
+            width: 10%;
+            height: 40px;
         }
         #text{
-            height: 25px;
+            width: 30%;
+            height: 40px;
         }
         html{
             text-align: center;
@@ -30,10 +32,10 @@
         </style>
     </head>
     <body> 
-        <input type="text" id="text" placeholder="動画IDを入力">
+        <input type="text" id="text" placeholder="動画IDを入力(https://youtube.com/watch?v=[動画ID])">
         <button onclick="getVideo()" id="ID-button">表示</button><br>
-        <iframe id="video" title="video" src="https://www.youtubeeducation.com/embed/jNQXAC9IVRw?enablejsapi=1&amp;rel=0&amp;control=1&amp;showinfo=0&amp;start=0&amp;autoplay=0&amp;cc_load_policy=0&amp;errorlinks=1&amp;hl=en&amp;authuser=0&amp;modestbranding=1&amp;rct=CpYBAYtJrowD8POUe2VfGoLX1T7Hmgvyqacer1sP3Ep32EDNTGNfXynpQtvMiunKS875xyr0sc5KtfNkfTTcU9GfhZlqnHUidIMd8HlUE5Pam_ivCuuWCsMMep-H4te6Mjoam2ByyfS_jitZi5M8QsfK_m7qSHSJ_k3KWca-smpMdXu2C5fxG9cmxnKMmXufDUxn8PZkwGjp&amp;embed_config=%7B%22hideInfoBar%22%3Afalse%2C%22disableRelatedVideos%22%3Atrue%2C%22enc%22%3A%22AYtJrozYCaJyIUSWHZyBwbBrmd6ZUciKUVGmjUjeuHqghw9WMT-UZ41kS_MYD4sX0N_bvJe2NzApz9hZF_zvSq2k7NPgzMk-CwzwkSUPqjMz8OEPpP3zTIKg-3sOcNYlX3Y7mdrzGVeYTZGu790w198qiarmtRFg_erhd6-zDIVOfJvtkFA-mVnAWCxOBBmDhIUWbMhJkNXEP9PSHaZcxMiNYhCeTqPyjGBJAeT6bho37Wfk%22%7D" width="1280px" height="720px"></iframe>
-        <iframe src="https://www.google.com/?igu=1" width="1280px" height="360px"></iframe>
+        <iframe id="video" title="video" src="https://www.youtubeeducation.com/embed/jNQXAC9IVRw?enablejsapi=1&amp;rel=0&amp;control=1&amp;showinfo=0&amp;start=0&amp;autoplay=0&amp;cc_load_policy=0&amp;errorlinks=1&amp;hl=en&amp;authuser=0&amp;modestbranding=1&amp;rct=CpYBAYtJrowD8POUe2VfGoLX1T7Hmgvyqacer1sP3Ep32EDNTGNfXynpQtvMiunKS875xyr0sc5KtfNkfTTcU9GfhZlqnHUidIMd8HlUE5Pam_ivCuuWCsMMep-H4te6Mjoam2ByyfS_jitZi5M8QsfK_m7qSHSJ_k3KWca-smpMdXu2C5fxG9cmxnKMmXufDUxn8PZkwGjp&amp;embed_config=%7B%22hideInfoBar%22%3Afalse%2C%22disableRelatedVideos%22%3Atrue%2C%22enc%22%3A%22AYtJrozYCaJyIUSWHZyBwbBrmd6ZUciKUVGmjUjeuHqghw9WMT-UZ41kS_MYD4sX0N_bvJe2NzApz9hZF_zvSq2k7NPgzMk-CwzwkSUPqjMz8OEPpP3zTIKg-3sOcNYlX3Y7mdrzGVeYTZGu790w198qiarmtRFg_erhd6-zDIVOfJvtkFA-mVnAWCxOBBmDhIUWbMhJkNXEP9PSHaZcxMiNYhCeTqPyjGBJAeT6bho37Wfk%22%7D" width="80%" height="800px"></iframe>
+        <iframe src="https://www.google.com/?igu=1" width="80%" height="360px"></iframe>
         <script>
             //変数の取得
             let videoID =document.getElementById("text");
