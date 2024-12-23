@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>Test Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" href="image/favicon.ico">
+        <link rel="stylesheet" href="css/style.css">
+        <!--OGP-->
+        <meta property="og:title" content="Get4_'s website" />
+        <meta property="og:description" content="Get4_ のウェブサイトです" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://getta4.github.io/Web/" />
+        <meta property="og:image" content="https://getta4.github.io/Web/Legacy/image/main.png" />
+        <meta property="og:site_name" content="Get4_'s website" />
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:title" content="Get4_'s website">
+        <meta name="twitter:description" content="Get4_ のウェブサイトです" />
+        <meta name="twitter:image" content="https://getta4.github.io/Web/image/move/1.png" />
+        <style>
+        #ID-button{
+            height: 25px;
+        }
+        #text{
+            height: 25px;
+        }
+        html{
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body> 
+        <input type="text" id="text">
+        <button onclick="getVideo()" id="ID-button" value="動画IDを入力">表示</button><br>
+        <iframe id="video" title="video" src="https://www.youtubeeducation.com/embed/setID?embed_config=%7B%22hideInfoBar%22%3Afalse%2C%22disableRelatedVideos%22%3Atrue%2C%22enc%22%3A%22AQ2SFqAYtfbArjiSYZHobGrDJsZiKVW5e3FjnDp__V09fJC-Jau13zpSt-FXYUYUPsbUA4tztVQtAPJJIjoq5YBkZbJ7CvYoS8DWltPh1_xMH8-2_KY2WoHYS7YppkZyw8ZYfoVRQcm2JW8ekDjh5KAumYiX29iaTePM1lRLochBLivSSQ59MM91GKRE1Epa_vspyITBSs6P-S8XTD0LfpDQsM0nitYFZ9ue2WCV9zpTxBpj%22%7D" width="1280px" height="720px"></iframe>
+        <script>
+            //変数の取得
+            let videoID =document.getElementById("text");
+            let videoFrame = document.getElementById("video");
+            //iframeの再取得、設定
+            function getVideo(){
+                videoFrame.src = "https://www.youtubeeducation.com/embed/"+ videoID.value +"?embed_config=%7B%22hideInfoBar%22%3Afalse%2C%22disableRelatedVideos%22%3Atrue%2C%22enc%22%3A%22AQ2SFqAYtfbArjiSYZHobGrDJsZiKVW5e3FjnDp__V09fJC-Jau13zpSt-FXYUYUPsbUA4tztVQtAPJJIjoq5YBkZbJ7CvYoS8DWltPh1_xMH8-2_KY2WoHYS7YppkZyw8ZYfoVRQcm2JW8ekDjh5KAumYiX29iaTePM1lRLochBLivSSQ59MM91GKRE1Epa_vspyITBSs6P-S8XTD0LfpDQsM0nitYFZ9ue2WCV9zpTxBpj%22%7D";
+                console.log(videoID.value);
+                videoID.value = "";
+            }
+        </script>
+    </body>
+</html>
