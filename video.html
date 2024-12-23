@@ -30,16 +30,16 @@
         </style>
     </head>
     <body> 
-        <input type="text" id="text">
-        <button onclick="getVideo()" id="ID-button" value="動画IDを入力">表示</button><br>
-        <iframe id="video" title="video" src="https://www.youtubeeducation.com/embed/setID?embed_config=%7B%22hideInfoBar%22%3Afalse%2C%22disableRelatedVideos%22%3Atrue%2C%22enc%22%3A%22AQ2SFqAYtfbArjiSYZHobGrDJsZiKVW5e3FjnDp__V09fJC-Jau13zpSt-FXYUYUPsbUA4tztVQtAPJJIjoq5YBkZbJ7CvYoS8DWltPh1_xMH8-2_KY2WoHYS7YppkZyw8ZYfoVRQcm2JW8ekDjh5KAumYiX29iaTePM1lRLochBLivSSQ59MM91GKRE1Epa_vspyITBSs6P-S8XTD0LfpDQsM0nitYFZ9ue2WCV9zpTxBpj%22%7D" width="1280px" height="720px"></iframe>
+        <input type="text" id="text" placeholder="動画IDを入力">
+        <button onclick="getVideo()" id="ID-button">表示</button><br>
+        <iframe id="video" title="video" src="https://www.youtubeeducation.com/embed/jNQXAC9IVRw?enablejsapi=1&amp;rel=0&amp;control=1&amp;showinfo=0&amp;start=0&amp;autoplay=0&amp;cc_load_policy=0&amp;errorlinks=1&amp;hl=en&amp;authuser=0&amp;modestbranding=1&amp;rct=CpYBAYtJrowD8POUe2VfGoLX1T7Hmgvyqacer1sP3Ep32EDNTGNfXynpQtvMiunKS875xyr0sc5KtfNkfTTcU9GfhZlqnHUidIMd8HlUE5Pam_ivCuuWCsMMep-H4te6Mjoam2ByyfS_jitZi5M8QsfK_m7qSHSJ_k3KWca-smpMdXu2C5fxG9cmxnKMmXufDUxn8PZkwGjp&amp;embed_config=%7B%22hideInfoBar%22%3Afalse%2C%22disableRelatedVideos%22%3Atrue%2C%22enc%22%3A%22AYtJrozYCaJyIUSWHZyBwbBrmd6ZUciKUVGmjUjeuHqghw9WMT-UZ41kS_MYD4sX0N_bvJe2NzApz9hZF_zvSq2k7NPgzMk-CwzwkSUPqjMz8OEPpP3zTIKg-3sOcNYlX3Y7mdrzGVeYTZGu790w198qiarmtRFg_erhd6-zDIVOfJvtkFA-mVnAWCxOBBmDhIUWbMhJkNXEP9PSHaZcxMiNYhCeTqPyjGBJAeT6bho37Wfk%22%7D" width="1280px" height="720px"></iframe>
         <script>
             //変数の取得
             let videoID =document.getElementById("text");
             let videoFrame = document.getElementById("video");
             //iframeの再取得、設定
             function getVideo(){
-                videoFrame.src = "https://www.youtubeeducation.com/embed/"+ videoID.value +"?embed_config=%7B%22hideInfoBar%22%3Afalse%2C%22disableRelatedVideos%22%3Atrue%2C%22enc%22%3A%22AQ2SFqAYtfbArjiSYZHobGrDJsZiKVW5e3FjnDp__V09fJC-Jau13zpSt-FXYUYUPsbUA4tztVQtAPJJIjoq5YBkZbJ7CvYoS8DWltPh1_xMH8-2_KY2WoHYS7YppkZyw8ZYfoVRQcm2JW8ekDjh5KAumYiX29iaTePM1lRLochBLivSSQ59MM91GKRE1Epa_vspyITBSs6P-S8XTD0LfpDQsM0nitYFZ9ue2WCV9zpTxBpj%22%7D";
+                videoFrame.src = "https://www.youtubeeducation.com/embed/"+ videoID.value +"?enablejsapi=1&amp;rel=0&amp;control=1&amp;showinfo=0&amp;start=0&amp;autoplay=0&amp;cc_load_policy=0&amp;errorlinks=1&amp;hl=en&amp;authuser=0&amp;modestbranding=1&amp;rct=CpYBAYtJrowD8POUe2VfGoLX1T7Hmgvyqacer1sP3Ep32EDNTGNfXynpQtvMiunKS875xyr0sc5KtfNkfTTcU9GfhZlqnHUidIMd8HlUE5Pam_ivCuuWCsMMep-H4te6Mjoam2ByyfS_jitZi5M8QsfK_m7qSHSJ_k3KWca-smpMdXu2C5fxG9cmxnKMmXufDUxn8PZkwGjp&amp;embed_config=%7B%22hideInfoBar%22%3Afalse%2C%22disableRelatedVideos%22%3Atrue%2C%22enc%22%3A%22AYtJrozYCaJyIUSWHZyBwbBrmd6ZUciKUVGmjUjeuHqghw9WMT-UZ41kS_MYD4sX0N_bvJe2NzApz9hZF_zvSq2k7NPgzMk-CwzwkSUPqjMz8OEPpP3zTIKg-3sOcNYlX3Y7mdrzGVeYTZGu790w198qiarmtRFg_erhd6-zDIVOfJvtkFA-mVnAWCxOBBmDhIUWbMhJkNXEP9PSHaZcxMiNYhCeTqPyjGBJAeT6bho37Wfk%22%7D";
                 console.log(videoID.value);
                 videoID.value = "";
             }
