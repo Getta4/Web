@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap');
-@font-face {
-    font-family: 'amazon';
-    src: url(/font/AmazonEmberDisplay_Bd.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap'); 
 
 html{
     text-align: center;
-    font-family: 'amazon';
+    font-family: 'Noto Sans JP';
+    font-display: swap;
 }
