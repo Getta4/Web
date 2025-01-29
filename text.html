@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>TextEditor</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" href="image/favicon.ico">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!--OGP-->
+        <meta property="og:title" content="Get4_'s website" />
+        <meta property="og:description" content="Get4_ のウェブサイトです" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://getta4.github.io/Web/" />
+        <meta property="og:image" content="https://getta4.github.io/Web/Legacy/image/main.png" />
+        <meta property="og:site_name" content="Get4_'s website" />
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:title" content="Get4_'s website">
+        <meta name="twitter:description" content="Get4_ のウェブサイトです" />
+        <meta name="twitter:image" content="https://getta4.github.io/Web/image/move/1.png" />
+        <!-- end OGP -->
+
+        <style>
+            html{
+                text-align: center;
+            }
+            
+            #fileInput {
+                display: none;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="Menu">
+            <input type="text" id="filename" placeholder="保存名を入力">
+            <button type="submit" id="save">Save</button>
+            <button type="reset" id="reset">Reset</button>
+            <input type="file" id="fileInput" accept=".txt">
+            <button type="button" id="load">Load</button>
+        </div>
+        <div id="TextArea">
+            <textarea id="text" rows="20" cols="100"></textarea>
+        </div>
+        <script>
+            document.getElementById('save').addEventListener('click', function() {
+                const text = document.getElementById('text').value;
+                const filename = document.getElementById('filename').value || 'text';
+                const blob = new Blob([text], { type: 'text/plain' });
+                const anchor = document.createElement('a');
+                anchor.download = filename + '.txt';
+                anchor.href = window.URL.createObjectURL(blob);
+                anchor.click();
+            });
+
+            document.getElementById('reset').addEventListener('click', function() {
+                document.getElementById('text').value = '';
+            });
+
+            document.getElementById('load').addEventListener('click', function() {
+                document.getElementById('fileInput').click();
+            });
+
+            document.getElementById('fileInput').addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('text').value = e.target.result;
+                    };
+                    reader.readAsText(file);
+                }
+            });
+        </script>
+    </body>
+</html>
