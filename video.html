@@ -25,7 +25,7 @@
         }
         #ID-button:hover{
             background-color: #f0f0f03b;
-            cursor:wait;
+            cursor: not-allowed;
         }
         #SearchButton{
             width: 5%;
@@ -48,10 +48,10 @@
         </style>
     </head>
     <body>         
-        <input type="text" id="text" placeholder="動画IDを入力 単語を入れて検索ボタンを押すとGoogle検索ができます">
-        <button onclick="getVideo()" id="ID-button">表示</button>
+        <input type="text" id="text" placeholder="単語を入れて検索ボタンを押すとGoogle検索ができます">
+        <button title="現在不具合発生中のため動画が視聴できません。" id="ID-button">表示</button>
         <button onclick="showSearch()" id="SearchButton">検索</button><br>
-        <iframe id="video" title="video" src="https://www.youtubeeducation.com/embed/xZVHvBq-yVg?enablejsapi=1&rel=0&control=1&showinfo=0&start=0&autoplay=0&cc_load_policy=0&errorlinks=1&hl=en&authuser=0&modestbranding=1&rct=CpcBATi76SNcU6szbXGEbHAkuCAqXkRC0QP0w3PrP6hXYud_FGp_GOYCvPKwCA14ml4VdgJ9Ywjhw7CpQ5ooNokZM3vsskfs4PQJDh8oQtS28XIo4z_LkXKBA_Jn4XFq4hCb1EjZBgr6betVDjfMis574Z_ghqZ-fKHGpUlhQPDvZpDNeA3BOYaITgcREyj78VZMAgZFZonVzQ%3D%3D&embed_config=%7B"hideInfoBar"%3Afalse%2C"disableRelatedVideos"%3Atrue%2C"enc"%3A"ATi76SNsvFm3A8d7B-erJbw1PGI5Cbhs65FPkJbWU3EDPAHraUaUEO8-q9vju1AtEZZK3A8-gJCTSXrGfBuYwb6M5fvAKOa4anldZkn2H4XA_rj7MlikOEoBfWxk5LedqvzvUZzwKAtx7xtYL7lEgys8uYGVVLrhLBeqJ5s-THu22wypsv0AMQBZTw_IITEJH6fOBFc4kEs8smlPjEZ_vkXZPpIY_npmE14k0Fi6b856TfBz"%7D" width="80%" height="900px" allowfullscreen></iframe>
+        <iframe id="video" title="video" src="https://www.google.com/?igu=1" width="80%" height="900px" allowfullscreen></iframe>
         <!-- https://www.youtubeeducation.com/watch?v=cr8magEp0Ho -->
         <!-- <iframe id="searchFrame" src=""></iframe> -->
         <script>
