@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link rel="icon" href="image/favicon.ico">
+        <link rel="manifest" href="manifest.webmanifest">
+      
         <meta name="description" content="Get4_ のウェブサイトです">
 
         <!--moveで使う画像を事前読み込み-->
@@ -68,6 +70,7 @@
         </style>
         
     </head>
+  
     <body id="dark">
         <input type="image" src="image/lightmode.webp" width="32" height="32" alt="mode_change" id="mode_change" onclick="mode_change()">
         <div id="maincanvas">
@@ -95,6 +98,7 @@
                 </a>
             </div>
         </div>
+      
         <script>
             const modePicture = document.getElementById("mode_change")
             const twitter = document.getElementById("twitter")
